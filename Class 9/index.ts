@@ -28,7 +28,7 @@ console.log("Car ", car.color);
 
 export default car;
 
-import c from "./sum.js";
+import { c } from "./sum.js";
 
 var d: number = c + 5;
 
