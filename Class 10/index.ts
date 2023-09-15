@@ -26,28 +26,52 @@
 
 // console.log("after async code");
 
-type CarType = { price: number; color: string; startCar: () => number };
+// type CarType = { price: number; color: string; startCar: () => number };
 
-class car {
-  price: number = 0;
-  color: string = "Undefined";
-  constructor(color: string, price: number) {
-    this.price = price;
-    this.color = color;
-    console.log("Constructor");
+// class car {
+//   price: number = 0;
+//   color: string = "Undefined";
+//   constructor(color: string, price: number) {
+//     this.price = price;
+//     this.color = color;
+//     console.log("Constructor");
+//   }
+
+//   startCar = () => {
+//     console.log("StartCar");
+//     return 10;
+//   };
+// }
+
+// let carA: CarType = new car("Red", 1000);
+
+// let carB: CarType = new car("Blue", 5000);
+// // carA.color = "Red";
+// // carA.price = 10000;
+// carA.startCar();
+// console.log(carA);
+// console.log(carB);
+
+console.log("Before Async");
+
+function promiseFunction(resolve: any, reject: any) {
+  // async
+  if (true) {
+    resolve("Successfullll");
+  } else {
+    reject("Something went wrong");
   }
-
-  startCar = () => {
-    console.log("StartCar");
-    return 10;
-  };
 }
 
-let carA: CarType = new car("Red", 1000);
+const result = new Promise(promiseFunction);
 
-let carB: CarType = new car("Blue", 5000);
-// carA.color = "Red";
-// carA.price = 10000;
-carA.startCar();
-console.log(carA);
-console.log(carB);
+result
+  .then((Success) => {
+    console.log("Success", Success);
+  })
+
+  .catch((Reject) => {
+    console.log("reject", Reject);
+  });
+
+console.log("After Async");
