@@ -16,13 +16,13 @@ function doSomething() {
   console.log("Print");
 }
 
-setTimeout(doSomething, 5000);
+setTimeout(doSomething, 1000);
 
 // setInterval(doSomething, 1000);
 
 setTimeout(() => {
   console.log("Print Something");
-}, 5000);
+}, 1000);
 
 console.log("after async code");
 
@@ -56,7 +56,7 @@ console.log("Before Async");
 
 function promiseFunction(resolve: any, reject: any) {
   // async
-  if (true) {
+  if (false) {
     resolve("Successfullll");
   } else {
     reject("Something went wrong");
@@ -75,3 +75,16 @@ result
   });
 
 console.log("After Async");
+
+setTimeout(() => {
+  console.log("Hello World");
+}, 1000);
+
+let setTimeOutID: any = 0;
+setTimeOutID = setTimeout(() => {
+  console.log("SettimeoutIDfunction");
+}, 1000);
+
+if (true) {
+  clearTimeout(setTimeOutID);
+}
