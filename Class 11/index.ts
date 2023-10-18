@@ -1,3 +1,7 @@
+import chalk from "chalk";
+
+console.log(chalk.red.bold.bgWhite.underline("Hello World"));
+
 import inquirer from "inquirer";
 console.log("1st");
 
@@ -21,3 +25,9 @@ async function uploadUser() {
 
 uploadUser();
 console.log("3rd");
+
+// try {
+//   await answers:Answers = await inquirer.prompt(questions);
+// } catch (error) {
+//   console.log("error", error);
+// }
