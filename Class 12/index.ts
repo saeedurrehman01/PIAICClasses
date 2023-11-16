@@ -68,10 +68,9 @@ console.log(result2);
 console.log(result3);
 
 interface TeacherA {
-    class: string
+  class: string;
 }
 
 let newObj: TeacherA = {
-    class: "CS"
-}
-
+  class: "CS",
+};
